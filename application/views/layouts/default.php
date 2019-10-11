@@ -8,5 +8,8 @@
 </head>
 <body>
     <?php echo $content; ?>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="/public/js/form.js"></script>
 </body>
 </html>

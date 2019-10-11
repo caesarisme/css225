@@ -7,7 +7,11 @@ use application\core\Controller;
 class AccountController extends Controller {
 
     public function loginAction() {
-        // $this->view->redirect('/');
+
+        if(!empty($_POST)) {
+            $this->view->ajax_redirect('/');
+        }
+
         $this->view->render('Войти в аккаунт');
     }
 

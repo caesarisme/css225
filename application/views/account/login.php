@@ -1,8 +1,8 @@
 <h3>Вход</h3>
-<form>
+<form action="/account/login" method="post">
     <p>Логин</p>
-    <p><input type="text" placeholder="login"></p>
+    <p><input type="text" placeholder="login" name="username"></p>
     <p>Пароль</p>
-    <p><input type="text" placeholder="password"></p>
-    <p><button>Войти</button></p>
+    <p><input type="text" placeholder="password" name="password"></p>
+    <p><button type="submit" name="enter">Войти</button></p>
 </form>
