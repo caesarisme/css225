@@ -9,14 +9,58 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <link rel="stylesheet" href="/public/css/style.css">
 
-    <title><?php echo $title; ?></title>
+    <title><?php echo $title; ?> | Mercedes-Benz.kz</title>
 </head>
 <body>
-    <?php echo $content; ?>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                SITE.com
+            </div>
+
+            <button id="menu-toggle"><i class="fas fa-list-ul"></i></button>
+            <nav id="menu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Contacts</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <?php echo $content; ?>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="logo">
+                SITE.com
+            </div>
+
+            <nav>
+                Sitemap:
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Contacts</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+
+
 
     <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="/public/js/form.js"></script>
     <script src="/public/js/script.js"></script>
+    <script src="/public/js/jquery.js"></script>
+    <script src="/public/js/form.js"></script>
 </body>
 </html>

@@ -6,6 +6,11 @@ use application\core\Controller;
 
 class AdminController extends Controller {
 
+//    public function __construct($params){
+//        parent::__construct($params);
+//        $this->view->layout = 'admin';
+//    }
+
     public function loginAction() {
         $this->view->render('Главная страница');
     }
