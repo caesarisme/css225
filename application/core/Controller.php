@@ -36,6 +36,6 @@ abstract class Controller {
     }
 
     public function isAcl($group) {
-        return in_array($this->params['controller'], $this->acl[$group]);
+        return in_array($this->params['action'], $this->acl[$group]);
     }
 }

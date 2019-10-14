@@ -7,16 +7,23 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
-    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
 
-    <title><?php echo $title; ?></title>
+    <title>Sign-in | Mercedes.kz</title>
 </head>
 <body>
-    <?php echo $content; ?>
 
-    <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="/public/js/form.js"></script>
-    <script src="/public/js/script.js"></script>
+    <section id="edit">
+        <div class="edit-block">
+            <h3>Edit article</h3>
+            <form>
+                <input type="text" name="title" placeholder="Title">
+                <textarea name="" id="" cols="30" rows="10">Article content</textarea>
+                <button type="submit">Login</button> 
+            </form>
+        </div>
+    </section>
+
+
 </body>
 </html>

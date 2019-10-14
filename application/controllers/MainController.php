@@ -7,11 +7,18 @@ use application\core\Controller;
 class MainController extends Controller {
 
     public function indexAction() {
-        $news = $this->model->getNews();
+        $this->view->render('Главная страница');
+    }
 
-        $vars = [
-            'news' => $news,
-        ];
-        $this->view->render('Главная страница', $vars);
+    public function aboutAction() {
+        $this->view->render('О нас');
+    }
+
+    public function contactAction() {
+        $this->view->render('Контакты');
+    }
+
+    public function postAction() {
+        $this->view->render('Пост');
     }
 }
