@@ -18,7 +18,7 @@ return [
         'action' => 'contact',
     ],
 
-    'post' => [
+    'post/{id:\d+}' => [
         'controller' => 'main',
         'action' => 'post',
     ],
@@ -28,6 +28,11 @@ return [
     'admin/login' => [
         'controller' => 'admin',
         'action' => 'login',
+    ],
+
+    'admin/posts' => [
+        'controller' => 'admin',
+        'action' => 'posts',
     ],
 
     'admin/logout' => [
@@ -40,12 +45,12 @@ return [
         'action' => 'add',
     ],
 
-    'admin/edit' => [
+    'admin/edit/{id:\d+}' => [
         'controller' => 'admin',
         'action' => 'edit',
     ],
 
-    'admin/delete' => [
+    'admin/delete/{id:\d+}' => [
         'controller' => 'admin',
         'action' => 'delete',
     ],

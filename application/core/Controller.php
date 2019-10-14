@@ -31,7 +31,15 @@ abstract class Controller {
         if ($this->isAcl('all')) {
             return true;
         }
-
+        elseif (isset($_SESSION['authorized']['id']) and $this->isAcl('authorized')) {
+            return true;
+        }
+        elseif (!isset($_SESSION['authorized']['id']) and $this->isAcl('guest')) {
+            return true;
+        }
+        elseif (isset($_SESSION['admin']) and $this->isAcl('admin')) {
+            return true;
+        }
         return false;
     }
 

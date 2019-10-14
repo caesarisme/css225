@@ -14,6 +14,7 @@ return [
     ],
 
     'admin' => [
+        'posts',
         'logout',
         'add',
         'edit',

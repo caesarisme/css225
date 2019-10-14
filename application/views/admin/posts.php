@@ -1,9 +1,5 @@
-<section id="intro">
-    <img src="/public/img/back.jpg" alt="">
-</section>
-
 <section id="index">
-    <h2>Recent news:</h2>
+    <h2>Posts list:</h2>
     <div class="news-wrapper">
         <article>
             <div class="article-img">
@@ -108,14 +104,5 @@
                 <a href="#" class="btn-more">More</a>
             </div>
         </article>
-    </div>
-
-    <h2>Categories:</h2>
-    <div class="categories-wrapper">
-        <a href="#" class="category">Category 1</a>
-        <a href="#" class="category">Category 2</a>
-        <a href="#" class="category">Category 2</a>
-        <a href="#" class="category">Category 3</a>
-        <a href="#" class="category">Category 4</a>
     </div>
 </section>

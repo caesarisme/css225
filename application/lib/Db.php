@@ -10,7 +10,7 @@ class Db {
     public function __construct() {
         $config = require 'application/config/db.php';
         $this->db = new PDO(
-            'mysql:host=' . $config['host'] . ';dbname=' . $config['dbname'] . ';charset=utf8;', 
+            'mysql:host=' . $config['host'] . ';dbname=' . $config['dbname'] . ';charset=utf8;',
             $config['user'], 
             $config['password']
         );
@@ -36,5 +36,9 @@ class Db {
     public function column($sql, $params = []) {
         $result = $this->query($sql, $params);
         return $result->fetchColumn();
+    }
+
+    public function lastInsertId() {
+        return $this->db->lastInsertId();
     }
 }
