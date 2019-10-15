@@ -14,7 +14,7 @@
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aut dicta dolorum laudantium nostrum qui ratione sint. Ad aliquid autem consectetur culpa deleniti, deserunt est praesentium provident quo tempore ut.
                 </p>
-                <a href="#" class="btn-more">More</a>
+                <a href="/post/1" class="btn-more">More</a>
             </div>
         </article>
 

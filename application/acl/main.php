@@ -5,7 +5,7 @@ return [
         'index',
         'about',
         'contact',
-        'post'
+        'post',
     ],
 
     'authorized' => [

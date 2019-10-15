@@ -45,19 +45,35 @@ class AdminController extends Controller {
     }
 
     public function editAction() {
+        if (!$this->model->isPostExists($this->params['id'])){
+            $this->view->errorCode(404);
+        }
+
         if (!empty($_POST)) {
             if (!$this->model->postValidate($_POST, 'edit')) {
                 $this->view->message('error', $this->model->error);
             }
-            $this->view->message('success', 'ok');
+            $this->model->postEdit($_POST, $this->params['id']);
+            if (!empty($_FILES['image']['tmp_name'])) {
+                $this->model->postUploadImage($_FILES['image']['tmp_name'], $this->params['id']);
+            }
+
+            $this->view->message('success', 'Saved!');
         }
 
-        $this->view->render('Edit post');
+        $vars = [
+            'data' => $this->model->postGet($this->params['id']),
+        ];
+
+        $this->view->render('Edit post', $vars);
     }
 
     public function deleteAction() {
-        debug($this->params);
-        exit('Удалить пост');
+        if (!$this->model->isPostExists($this->params['id'])) {
+            $this->view->errorCode(404);
+        }
+        $this->model->postDelete($this->params['id']);
+        $this->view->redirect('admin/posts');
     }
 
     public function logoutAction() {
@@ -66,7 +82,11 @@ class AdminController extends Controller {
     }
 
     public function postsAction() {
-        $this->view->render('Posts list');
+        $vars = [
+            'posts' => $this->model->postsGet(),
+        ];
+
+        $this->view->render('Posts list', $vars);
     }
 
 }

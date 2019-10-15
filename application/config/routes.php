@@ -23,6 +23,16 @@ return [
         'action' => 'post',
     ],
 
+    'api/getpost/{id:\d+}' => [
+        'controller' => 'main',
+        'action' => 'getpost',
+    ],
+
+    'api/getpostlist' => [
+        'controller' => 'main',
+        'action' => 'getpostlist',
+    ],
+
 
     // AdminController
     'admin/login' => [

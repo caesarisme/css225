@@ -204,13 +204,22 @@ footer .container {
     margin-bottom: 20px;
 }
 
-#index article a.btn-more {
+#index article a.btn-edit {
     color: #fff;
     padding: 10px 15px;
     border-radius: 5px;
     width: fit-content;
     font-size: 16px;
     background: dodgerblue;
+}
+
+#index article a.btn-delete {
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    width: fit-content;
+    font-size: 16px;
+    background: red;
 }
 
 @media (max-width: 991px) {

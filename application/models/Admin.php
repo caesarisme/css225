@@ -10,7 +10,7 @@ class Admin extends Model {
 
     public function loginValidate($post) {
         $cfg = require 'application/config/admin.php';
-        if ($cfg['login'] != $_POST['login'] or $cfg['password'] != $_POST['password']) {
+        if ($cfg['login'] != $post['login'] or $cfg['password'] != $post['password']) {
             $this->error = 'Login or password is incorrect!';
             return false;
         }
@@ -47,6 +47,18 @@ class Admin extends Model {
         return $this->db->lastInsertId();
     }
 
+    public function postEdit($post, $id) {
+        $context = [
+            'id' => $id,
+            'title' => $post['title'],
+            'content' => $post['content'],
+            'pub_date' => date('Y-m-d H:i:s'),
+        ];
+
+        $this->db->query('UPDATE posts SET title=:title, content=:content, pub_date=:pub_date WHERE id=:id', $context);
+        return $this->db->lastInsertId();
+    }
+
     public function postUploadImage($path, $id) {
         move_uploaded_file($path, 'public/media/posts/'.$id.'.jpg');
         $context = [
@@ -56,8 +68,30 @@ class Admin extends Model {
         $this->db->query('UPDATE posts SET image=:image WHERE id=:id', $context);
     }
 
-    public function isPostExists($id) {
+    public function postDelete($id) {
+        $context = [
+            'id' => $id,
+        ];
+        $this->db->query('DELETE FROM posts WHERE id=:id', $context);
+        unlink('public/media/posts/'.$id.'.jpg');
+    }
 
+    public function postGet($id) {
+        $context = [
+            'id' => $id,
+        ];
+        return $this->db->row('SELECT * FROM posts WHERE id=:id', $context)[0];
+    }
+
+    public function postsGet() {
+        return $this->db->row('SELECT * FROM posts');
+    }
+
+    public function isPostExists($id) {
+        $context = [
+            'id' => $id
+        ];
+        return $this->db->column('SELECT id FROM posts WHERE id=:id', $context);
     }
 
 }

@@ -6,10 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <link rel="stylesheet" href="/public/css/style.css">
 
-    <title><?php echo $title; ?> | Mercedes-Benz.kz</title>
+    <title><?php echo $title; ?> | Site.com</title>
 </head>
 <body>
 
@@ -60,7 +59,5 @@
 
     <!-- Scripts -->
     <script src="/public/js/script.js"></script>
-    <script src="/public/js/jquery.js"></script>
-    <script src="/public/js/form.js"></script>
 </body>
 </html>
