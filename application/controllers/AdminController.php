@@ -94,4 +94,34 @@ class AdminController extends Controller {
         $this->view->render('Posts list', $vars);
     }
 
+    public function starAction() {
+        if (!$this->model->isPostExists($this->params['id'])){
+            $this->view->errorCode(404);
+        }
+
+        $this->model->starPost($this->params['id']);
+        $this->view->message('success', 'Starred!');
+    }
+
+    public function starlistAction() {
+        $posts = [];
+        $stars = $this->model->starsGet();
+
+        foreach ($stars as $star) {
+
+            if ($this->model->isPostExists($star['post_id'])) {
+                $posts[$star['post_id']] = $this->model->postGet($star['post_id']);
+            }
+
+        }
+
+        $vars = [
+            'posts' => $posts,
+        ];
+
+        return $this->view->render('My favorites', $vars);
+
+
+    }
+
 }

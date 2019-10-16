@@ -109,6 +109,10 @@ header #menu-toggle {
     }
 }
 
+main {
+    min-height: 80vh;
+}
+
 main .container {
     padding: 50px 0;
 }

@@ -19,5 +19,7 @@ return [
         'add',
         'edit',
         'delete',
+        'star',
+        'starlist'
     ],
 ];

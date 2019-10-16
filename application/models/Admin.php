@@ -135,6 +135,19 @@ class Admin extends Model {
         return $this->db->row('SELECT * FROM categories WHERE id=:id', $context)[0];
     }
 
+    public function starPost($id) {
+        $context = [
+            'id' => null,
+            'post_id' => $id,
+        ];
+        $this->db->query('INSERT INTO stars VALUES (:id, :post_id)', $context);
+        return 'ok';
+    }
+
+    public function starsGet() {
+        return $this->db->row('SELECT * FROM stars');
+    }
+
 }
 
 

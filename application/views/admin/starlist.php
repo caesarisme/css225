@@ -1,5 +1,5 @@
 <section id="index">
-    <h2>Posts list:</h2>
+    <h2>Starred posts:</h2>
     <div class="news-wrapper">
         <?php foreach ($posts as $post): ?>
             <article>
@@ -13,9 +13,6 @@
                     </p>
                     <a href="/admin/edit/<?= $post['id'] ?>" class="btn-edit">Edit</a>
                     <a href="/admin/delete/<?= $post['id'] ?>" class="btn-delete">Delete</a>
-                    <form action="/admin/star/<?= $post['id'] ?>" class="star_form" method="post">
-                        <input type="submit" value="+ STAR">
-                    </form>
                 </div>
             </article>
         <?php endforeach; ?>

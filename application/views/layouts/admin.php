@@ -18,15 +18,15 @@
                 SITE.com
             </div>
 
-            <button id="menu-toggle"><i class="fas fa-list-ul"></i></button>
+            <button id="menu-toggle">MENU</button>
             <nav id="menu">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Gallery</a></li>
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Contacts</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/posts">Posts</a></li>
+                    <li><a href="/contact">Contacts</a></li>
                     <li><a href="/admin/add">+ New</a></li>
                     <li><a href="/admin/posts">Posts</a></li>
+                    <li><a href="/admin/stars">Starred</a></li>
                     <li><a href="/admin/logout">Logout</a></li>
                 </ul>
             </nav>

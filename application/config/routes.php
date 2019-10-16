@@ -64,4 +64,14 @@ return [
         'controller' => 'admin',
         'action' => 'delete',
     ],
+
+    'admin/star/{id:\d+}' => [
+        'controller' => 'admin',
+        'action' => 'star',
+    ],
+
+    'admin/stars' => [
+      'controller' => 'admin',
+      'action' => 'starlist',
+    ],
 ];
