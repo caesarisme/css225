@@ -2,21 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7c1c12d-eef0-4b26-9df4-414d21adf425" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/application/views/main/posts.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/fetch_form.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/acl/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/acl/main.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/config/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/routes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/AdminController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/MainController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/models/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/add.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/admin/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/posts.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/posts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/layouts/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/layouts/default.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/main/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/main/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/main/post.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/main/post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/admin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/media/posts/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/media/posts/8.jpg" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,16 +57,16 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/application/views/main" />
     <property name="settings.editor.selected.configurable" value="liveEdit" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/js" />
+      <recent name="$PROJECT_DIR$/application/views/main" />
       <recent name="$PROJECT_DIR$/application/views/admin" />
+      <recent name="$PROJECT_DIR$/public/js" />
       <recent name="$PROJECT_DIR$/application/models" />
       <recent name="$PROJECT_DIR$/application/views/layouts" />
-      <recent name="$PROJECT_DIR$/public/css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/application/views/main" />
@@ -114,7 +110,7 @@
       <workItem from="1570731197236" duration="115000" />
       <workItem from="1570731313936" duration="87000" />
       <workItem from="1570731426052" duration="34704000" />
-      <workItem from="1571082050329" duration="8429000" />
+      <workItem from="1571082050329" duration="20268000" />
     </task>
     <servers />
   </component>

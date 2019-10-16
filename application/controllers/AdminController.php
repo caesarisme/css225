@@ -41,7 +41,11 @@ class AdminController extends Controller {
             $this->view->message('success', 'Post added');
         }
 
-        $this->view->render('New post');
+        $vars = [
+            'categories' => $this->model->categoriesGet(),
+        ];
+
+        $this->view->render('New post', $vars);
     }
 
     public function editAction() {
@@ -62,7 +66,8 @@ class AdminController extends Controller {
         }
 
         $vars = [
-            'data' => $this->model->postGet($this->params['id']),
+            'post' => $this->model->postGet($this->params['id']),
+            'categories' => $this->model->categoriesGet(),
         ];
 
         $this->view->render('Edit post', $vars);

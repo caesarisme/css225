@@ -34,10 +34,30 @@ class MainController extends Controller {
             $this->view->errorCode(404);
         }
 
+
+        $post = $admin_model->postGet($this->params['id']);
+        $category = $admin_model->categoryGet($post['category_id']);
         $vars = [
-            'post' => $admin_model->postGet($this->params['id']),
+            'post' => $post,
+            'category' => $category,
         ];
 
         $this->view->render('Article', $vars);
+    }
+
+    public function postsAction() {
+        $admin_model = new Admin;
+
+        $vars = [
+            'posts' => $admin_model->postsGet(),
+            'categories' => $admin_model->categoriesGet(),
+        ];
+
+        $this->view->render('Posts', $vars);
+    }
+
+    public function filterAction() {
+        $admin_model = new Admin;
+        exit ( json_encode($admin_model->postsFilter($_POST)) );
     }
 }

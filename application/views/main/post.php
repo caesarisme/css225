@@ -5,7 +5,7 @@
 <section id="article">
     <article>
         <h2 id="post__title"><?= $post['title'] ?></h2>
-        <a href=""><h4>Category 3</h4></a>
+        <a href=""><h4><?= $category['title'] ?></h4></a>
 
         <p id="post__content"><?= $post['content'] ?></p>
 

@@ -23,14 +23,14 @@ return [
         'action' => 'post',
     ],
 
-    'api/getpost/{id:\d+}' => [
+    'posts' => [
         'controller' => 'main',
-        'action' => 'getpost',
+        'action' => 'posts',
     ],
 
-    'api/getpostlist' => [
+    'api/filter' => [
         'controller' => 'main',
-        'action' => 'getpostlist',
+        'action' => 'filter',
     ],
 
 
